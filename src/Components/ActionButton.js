@@ -1,6 +1,7 @@
-function ActionButton({action, onClick}){
+
+function ActionButton({action, onClick, className}){
     return(
-        <button onClick={onClick}>{action}</button>
+        <button className={`{$styles.Logout}${className}`}onClick={onClick}>{action}</button>
     );
 }
 export default ActionButton;

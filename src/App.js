@@ -6,7 +6,7 @@ function App() {
       <Routes>
         
        {/* <Route path="/"element={<Login/>}></Route>  Cria a rota padrão para o login */}
-        <Route path="/"element={<Dashboard/>}></Route>{/*controla a URL e direciona ao Dashboard*/}
+        <Route path="/" element={<Dashboard/>}></Route>{/*controla a URL e direciona ao Dashboard*/}
 
       
       </Routes>
