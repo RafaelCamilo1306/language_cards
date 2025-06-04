@@ -1,0 +1,20 @@
+:root {
+  --cor-verde-escuro: #325943; /* Cor primária em hexadecimal */
+  --cor-verde-claro: #B1BFA3;
+  --cor-creme:#F2EBD5; 
+  --cor-vermelho-principal:#F25252;
+  --cor-vermelho-secundário: #732C26;
+}
+
+button {
+    background-color: none;
+    color: var(--cor-verde-escuro);
+    border: none; /* Remove a borda padrão */
+    padding: 8px 16px; /* Adiciona padding ao botão */
+    border-radius: 5px; /* Define um border-radius */
+    height: 10%;
+    width: auto;
+    cursor: pointer; /* Muda o cursor para pointer */
+    font-size: inherit; /* Mantém o tamanho da fonte herdado */
+    box-sizing: border-box;
+}

@@ -2,7 +2,7 @@
 .Dashcontainer{
     width:90vw;
     margin: 3vw auto;
-    background-color: #F4EBD0;
+    background-color: var(--cor-creme);
     border-radius: 18px;
 }
 .DashHeader{
@@ -11,14 +11,13 @@
     padding: 24px 16px;
     box-sizing: border-box;
     justify-content: space-between;
-    background-color: #A8D5BA;
+    align-items: center;
+    background-color: var(--cor-verde-claro);
     border-radius: 18px 18px 0 0;
 }
 .Logout{
-    background-color: rgb(253, 54, 23);
-    border: solid 1px rgb(255, 0, 0);
-    margin: 0;
-    height: auto;
-    padding: 4px 10px;
-    box-sizing: border-box;
+    background-color: var(--cor-vermelho-principal);
+    border: solid 1px var(--cor-vermelho-secundário);
+
+  
 }

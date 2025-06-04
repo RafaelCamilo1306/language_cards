@@ -1,8 +1,5 @@
-.Logout{
-    background-color: rgb(253, 54, 23);
-    border: solid 1px rgb(255, 0, 0);
-    margin: 0;
-    height: auto;
-    padding: 4px 10px;
-    box-sizing: border-box;
+.button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }

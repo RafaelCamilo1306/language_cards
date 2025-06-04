@@ -9,7 +9,7 @@ function Dashboard(){
     const[showDailyWord, setShowCard] = useState(true);
 
     return(
-    <body>
+    <div className={styles.body}>
         <div  className={styles.Dashcontainer}>
             <header className={styles.DashHeader}>
             <h1> Dashboard</h1>
@@ -31,7 +31,8 @@ function Dashboard(){
             
         </div>
 
-    </body>);
+    </div>
+    );
 }
 
 export default Dashboard;
