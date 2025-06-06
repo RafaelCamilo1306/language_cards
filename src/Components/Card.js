@@ -6,8 +6,11 @@ function CardContent({onclose}){
     <div className={styles.Card_container}>
         <div className={styles.Card_body}>
             <h3>Palavra</h3>
+
+            <div className={styles.paginado}>
             <h4> Significado</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus, felis sit amet porta aliquam, augue arcu convallis lectus, ut lacinia nunc tortor nec augue. Pellentesque facilisis malesuada tortor in finibus. </p>
+            <p className={styles.Cardtext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus, felis sit amet porta aliquam, augue arcu convallis lectus, ut lacinia nunc tortor nec augue. Pellentesque facilisis malesuada tortor in finibus. </p>
+            </div>
             
             <ActionButton action="Fechar" onClick={onclose}/>
         </div>

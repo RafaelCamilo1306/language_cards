@@ -14,7 +14,7 @@ function Dashboard(){
             <header className={styles.DashHeader}>
             <h1> Dashboard</h1>
             
-            <ActionButton action="Sair" onClick={()=> alert("Logout concluido")} className={styles.Logout}/>
+            <ActionButton action=" " onClick={()=> alert("Logout concluido")} className={styles.Logout}/>
             
             </header>
 

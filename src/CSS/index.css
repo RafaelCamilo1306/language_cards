@@ -4,6 +4,8 @@
   --cor-creme:#F2EBD5; 
   --cor-vermelho-principal:#F25252;
   --cor-vermelho-secundário: #732C26;
+    font-family: 'Fredoka One', cursive;
+    color: var(--cor-verde-escuro);
 }
 
 button {
@@ -17,4 +19,5 @@ button {
     cursor: pointer; /* Muda o cursor para pointer */
     font-size: inherit; /* Mantém o tamanho da fonte herdado */
     box-sizing: border-box;
+    font-family: 'Fredoka One', cursive;
 }

@@ -8,17 +8,43 @@
     width: 50%;
     height: auto;
     z-index: 9999;
-    box-shadow: -6px 6px 0px 0px rgba(0,0,0,1);
-    animation: surge 2s;
+    animation: surge 2s ease-out forwards;
 
 }
 .Card_body{
-    padding: 16px;
+    padding: 20px 20px 20px 40px;
+    box-sizing: border-box;
     width: 100%;
-    border: solid black;
-    border-radius: 0px 10px 0px 0px;
+    border: 3px solid var(--cor-verde-escuro);
+    border-radius: 16px;
+
+    background-color: var(--cor-creme);
 }
 
+.Card_body::before{
+    content: "";
+    position: absolute;
+    top:5vh;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--cor-verde-escuro);
+    border-radius: 50%;
+    box-shadow: 
+    0 8vh 0 var(--cor-verde-escuro),
+    0 16vh 0  var(--cor-verde-escuro);
+
+}
+
+.paginado{
+    padding: 0px 6px 18px 6px;
+    background-image: linear-gradient(to bottom, var(--cor-verde-claro) 2px , transparent 2px);
+    background-size: 100% 24px;
+}
+
+.Cardtext{
+    padding: 8px 0 0 0 ;
+}
 @keyframes surge {
     0%{
         opacity: 0;
