@@ -3,15 +3,15 @@
   --cor-verde-claro: #B1BFA3;
   --cor-creme:#F2EBD5; 
   --cor-vermelho-principal:#F25252;
-  --cor-vermelho-secundário: #732C26;
+  --cor-vermelho-secundario: #732C26;
     font-family: 'Fredoka One', cursive;
     color: var(--cor-verde-escuro);
 }
 
 button {
-    background-color: none;
-    color: var(--cor-verde-escuro);
-    border: none; /* Remove a borda padrão */
+    background-color: var(--cor-vermelho-principal);
+    border: 1px solid var(--cor-vermelho-secundario);
+    color: var(--cor-creme);
     padding: 8px 16px; /* Adiciona padding ao botão */
     border-radius: 5px; /* Define um border-radius */
     height: 10%;

@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 90%;
     height: auto;
     z-index: 9999;
     animation: surge 2s ease-out forwards;
@@ -15,24 +15,24 @@
     padding: 20px 20px 20px 40px;
     box-sizing: border-box;
     width: 100%;
+    height: 100%;
     border: 3px solid var(--cor-verde-escuro);
     border-radius: 16px;
-
     background-color: var(--cor-creme);
 }
 
 .Card_body::before{
     content: "";
     position: absolute;
-    top:5vh;
+    top:20%;
     left: 0px;
     width: 20px;
     height: 20px;
     background-color: var(--cor-verde-escuro);
     border-radius: 50%;
     box-shadow: 
-    0 8vh 0 var(--cor-verde-escuro),
-    0 16vh 0  var(--cor-verde-escuro);
+    0 10vh 0 var(--cor-verde-escuro),
+    0 20vh 0  var(--cor-verde-escuro);
 
 }
 
@@ -43,7 +43,31 @@
 }
 
 .Cardtext{
-    padding: 8px 0 0 0 ;
+    padding: 8px 0 0 0;
+    max-height: 100px;
+    overflow-y: auto;
+    -ms-overflow-style: none;  /* para IE/Edge */
+    scrollbar-width: none;    
+}
+
+.Cardtext::-webkit-scrollbar {
+  display: none; /* para Chrome, Safari e Opera */
+}
+.close{
+    padding: 16px 16px;
+    box-sizing: border-box;
+    height: 10%;
+    width: 10%;
+    position: fixed;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--cor-vermelho-principal);
+    border: 1px solid var(--cor-vermelho-secundario);
+    color: var(--cor-creme);
 }
 @keyframes surge {
     0%{
@@ -54,4 +78,26 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+@media screen and (min-width: 768px){
+.Card_container{
+    width: 40%;
+}
+.close {
+    top: -10px;
+    right: -6px;
+    height: 5%;
+    width: 2% ;
+  }
+  .Cardtext{
+    max-width: none;
+  }
+  .Card_body::before{
+    box-shadow: 
+    0 65px 0 var(--cor-verde-escuro),
+    0 130px 0  var(--cor-verde-escuro);
+
+  }
+    
 }

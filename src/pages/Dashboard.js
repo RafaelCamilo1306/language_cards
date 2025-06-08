@@ -1,12 +1,23 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Dashboard.module.css"
+
 
 import CardContent from "../Components/Card";
 import ActionButton from "../Components/ActionButton";
 
 
 function Dashboard(){
+
     const[showDailyWord, setShowCard] = useState(true);
+    
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+    
+    alert("Usuário deslogado");
+    navigate("/login"); // redireciona pra tela de login
+    };
 
     return(
     <div className={styles.body}>
@@ -14,7 +25,7 @@ function Dashboard(){
             <header className={styles.DashHeader}>
             <h1> Dashboard</h1>
             
-            <ActionButton action=" " onClick={()=> alert("Logout concluido")} className={styles.Logout}/>
+            <ActionButton action=" " onClick={handleLogout} className={styles.Logout}/>
             
             </header>
 

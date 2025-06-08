@@ -12,7 +12,7 @@ function CardContent({onclose}){
             <p className={styles.Cardtext}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus cursus, felis sit amet porta aliquam, augue arcu convallis lectus, ut lacinia nunc tortor nec augue. Pellentesque facilisis malesuada tortor in finibus. </p>
             </div>
             
-            <ActionButton action="Fechar" onClick={onclose}/>
+            <ActionButton action="X" onClick={onclose} className={styles.close}/>
         </div>
     </div>
     );

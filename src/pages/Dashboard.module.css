@@ -17,7 +17,7 @@
 }
 .Logout{
     background-color: var(--cor-vermelho-principal);
-    border: solid 1px var(--cor-vermelho-secundário);
+    border: solid 1px var(--cor-vermelho-secundario);
 
   
 }
