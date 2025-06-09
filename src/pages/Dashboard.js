@@ -16,7 +16,7 @@ function Dashboard(){
     const handleLogout = () => {
     
     alert("Usuário deslogado");
-    navigate("/login"); // redireciona pra tela de login
+    navigate("/"); // redireciona pra tela de login
     };
 
     return(

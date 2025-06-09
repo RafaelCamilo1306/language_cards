@@ -6,7 +6,7 @@ function App() {
     <BrowserRouter> {/* Lib para navegar no JS sem recarregar a página e controlar a url */}
       <Routes>
         
-       <Route path="/Login"element={<Login/>}></Route>  {/*Cria a rota padrão para o login */}
+       <Route path="/"element={<Login/>}></Route>  {/*Cria a rota padrão para o login */}
        <Route path="/Dashboard" element={<Dashboard/>}></Route>{/*controla a URL e direciona ao Dashboard*/}
 
       
