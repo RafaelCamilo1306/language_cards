@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Dashboard.module.css"
 
@@ -9,6 +9,18 @@ import ActionButton from "../Components/ActionButton";
 
 function Dashboard(){
 
+
+     const listaPalavras= [
+        { palavra: 'Ephemeral', significado: 'Duradouro por um curto período de tempo' },
+        { palavra: 'Serendipity', significado: 'Descoberta feliz por acaso' },
+        { palavra: 'Petrichor', significado: 'Cheiro da terra após a chuva' },
+        ];
+
+    const[card, setCard]= useState(null);
+    const sortWord = () =>{
+        const randomic = listaPalavras[Math.floor(Math.random()* listaPalavras.length)]
+        setCard(randomic)
+    };
     const[showDailyWord, setShowCard] = useState(true);
     
     const navigate = useNavigate();
@@ -23,15 +35,27 @@ function Dashboard(){
     <div className={styles.body}>
         <div  className={styles.Dashcontainer}>
             <header className={styles.DashHeader}>
+                
             <h1> Dashboard</h1>
             
             <ActionButton action=" " onClick={handleLogout} className={styles.Logout}/>
             
             </header>
 
-            <ActionButton action="Mostar palavrar" onClick={() => setShowCard(true)}/>
+            <ActionButton action="Mostrar palavra" onClick={() => {
+                sortWord();
+                setShowCard(true);
+             }} />
 
-            {showDailyWord && <CardContent onclose={() => setShowCard(false)}/>}
+
+            {showDailyWord && card && (
+        <CardContent
+            onclose={() => setShowCard(false)}
+            word={card.palavra}
+            significado={card.significado}
+        />
+        )}
+
             
             {/*Seção que receberá o progresso do usário
                 - categorizar as palavras de acordo com o alfabeto;
