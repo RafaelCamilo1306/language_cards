@@ -1,36 +1,52 @@
 import {useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Dashboard.module.css"
-
-
+import Catalogo from "../Components/CatalogoPalavras";
 import CardContent from "../Components/Card";
 import ActionButton from "../Components/ActionButton";
 
 
 function Dashboard(){
+    // Hook para navegação
+    const navigate = useNavigate();
+
+// Estado para armazenar a lista de palavras
+     const [listaPalavras, setListaPalavras] = useState([]);
+
+    fetch('http://localhost:3001/palavras', {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    })
+    .then((response) => response.json())
+    .then((data) => {  
+        setListaPalavras(data);
+    })
+    .catch((error) => { console.log(error) });
 
 
-     const listaPalavras= [
-        { palavra: 'Ephemeral', significado: 'Duradouro por um curto período de tempo' },
-        { palavra: 'Serendipity', significado: 'Descoberta feliz por acaso' },
-        { palavra: 'Petrichor', significado: 'Cheiro da terra após a chuva' },
-        ];
 
-    const[card, setCard]= useState(null);
+    // Função para selecionar uma palavra aleatória
     const sortWord = () =>{
         const randomic = listaPalavras[Math.floor(Math.random()* listaPalavras.length)]
         setCard(randomic)
     };
+
+    // Estado para controlar a exibição do card
+    const[card, setCard]= useState(false);
+    // Estado para controlar a exibição do card
     const[showDailyWord, setShowCard] = useState(true);
     
-    const navigate = useNavigate();
 
+    // Função para deslogar o usuário
     const handleLogout = () => {
     
     alert("Usuário deslogado");
     navigate("/"); // redireciona pra tela de login
     };
-
+    
+// Renderização do componente
     return(
     <div className={styles.body}>
         <div  className={styles.Dashcontainer}>
@@ -57,12 +73,9 @@ function Dashboard(){
         )}
 
             
-            {/*Seção que receberá o progresso do usário
-                - categorizar as palavras de acordo com o alfabeto;
-                - exibir um gráfico de processo;
-                    --será preciso armazenar a data que as palavras foram enviadas ao usuário;
-                
-            */}
+        
+            <Catalogo palavras={listaPalavras}/>
+        
             
         </div>
 

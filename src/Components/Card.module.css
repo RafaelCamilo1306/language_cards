@@ -36,12 +36,18 @@
 
 }
 
-.paginado{
-    padding: 0px 6px 18px 6px;
-    background-image: linear-gradient(to bottom, var(--cor-verde-claro) 2px , transparent 2px);
-    background-size: 100% 24px;
+.Card_body h3::after, H4::after, P::after,h4::before ,p::before{
+    content: "";
+     display: block;
+    height: 2px; /* altura da linha */
+    margin-top: 2px;
+    background-image: linear-gradient(to right, var(--cor-verde-claro) 50%, transparent 50%);
+    background-size: 200% 100%; 
 }
-
+.Card_body h4::before ,p::before{
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
 .Cardtext{
     padding: 8px 0 0 0;
     max-height: 100px;

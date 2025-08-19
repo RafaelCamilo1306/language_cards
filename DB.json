@@ -1,0 +1,20 @@
+{
+        "project":[],
+        "palavras":[
+                {       
+                        "id": 1,
+                        "palavra": "Ephemeral", 
+                        "significado": "Duradouro por um curto período de tempo" 
+                },
+                { 
+                        "id": 2,
+                        "palavra": "Serendipity", 
+                        "significado": "descoberta feliz por acaso" 
+                },
+                { 
+                        "id": 3,
+                        "palavra": "Petrichor", 
+                        "significado": "Cheiro da terra após a chuva" 
+                }
+        ]
+}

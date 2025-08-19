@@ -8,10 +8,19 @@ function Login(){
 
     const handleLogin=(e, Inputpass, InputUser)=>{
         e.preventDefault()
-        console.log('login realizado');
-        console.log(`O usuário ${user} entrou com a senha ${pass}`);
-        navegation("/Dashboard");
-   
+        
+        if(user || pass){
+            
+            if(user == "admin" || pass == "admin"){
+                navegation("/Dashboard");
+            }else{
+                e.target.reset();
+                alert("Usuário ou senha inválidos");
+            }
+
+        }else {
+            alert("Preencha todos os campos");
+        }
     };
 
     const[user, setUser] =  useState();
@@ -38,7 +47,7 @@ function Login(){
 
                 <label htmlFor="pass">Senha </label>    
                 <input 
-                type="text" 
+                type="password" 
                 name="inputPass"
                 id="pass"
                 onChange={(e)=> setPass(e.target.value)}/>
